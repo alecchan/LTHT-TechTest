@@ -1,0 +1,36 @@
+﻿body {
+}
+
+.people table th {
+    font-weight: bold;
+}
+.people table td:first-child {
+    color: #0092ff;
+}
+
+
+.people table tr .no {
+    color: red;
+}
+
+.people table tr .yes {
+    color: green;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.person .form-horizontal .control-label {
+    padding: 0;
+}
+
+.person h2 {
+    border-bottom: 1px solid #EEEEEE;
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+}
+
+.people .form-buttons {
+    padding-top: 1em;
+}

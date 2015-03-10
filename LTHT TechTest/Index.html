@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+    <title>LTHT TechTest</title>
+    <meta name="description" content="LTHT TechTest using AngularJS">
+    <meta name="author" content="Alec Chan">
+    <meta charset="utf-8">
+ 
+    <link href="Content/bootstrap.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+    
+    <script src="scripts/angular.min.js"></script>
+    <script src="scripts/angular-route.min.js"></script>
+   
+    <!-- Bootstrapping -->
+    <script src="app/app.js"></script>
+    <script src="app/config.js"></script>
+    <script src="app/config.route.js"></script>
+
+    <!-- common -->
+    <script src="app/common/filters/yesNo.js"></script>
+
+    <!-- services -->
+    <script src="app/services/dataservice.js"></script>
+
+    <!-- app -->
+    <script src="app/person/listPeopleCtrl.js"></script>
+    <script src="app/person/personCtrl.js"></script>
+
+</head>
+<body>
+    <div id="main">
+        <section id="content" class="content container">
+            <div ng-view></div>
+        </section>
+    </div>
+</body>
+</html>

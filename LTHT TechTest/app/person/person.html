@@ -1,0 +1,45 @@
+﻿<section id="people-view" class="people" data-ng-controller="person as vm">
+    <section class="person ">
+        <div>
+            <div>
+                <h1>Update {{ vm.person.FirstName + " " + vm.person.LastName }}</h1>
+            </div>
+            <form ng-submit="vm.submitChanges(vm.person)" class="form-horizontal">
+                <div class="person-details">
+                    <h2>User Details</h2>
+                    <div>
+                        <div class="form-group">
+                            <label class="col-xs-2 control-label" for="authorised">Authorised</label>
+                            <div class="col-xs-10">
+                                <input id="authorised" type="checkbox" ng-model="vm.person.IsAuthorised" />
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-xs-2 control-label" for="enabled">Enabled</label>
+                            <div class="col-xs-10">
+                                <input id="enabled" type="checkbox" ng-model="vm.person.IsEnabled" />
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="person-colours">
+                    <h2>Favourite Colours</h2>
+                    <div ng-repeat="item in vm.person.Colours" class="form-group">
+                        <label class="col-xs-2 control-label" for="{{'colourId' + item.ColourId}}">{{item.Name}}</label>
+                        <div class="col-xs-10" id="">
+                            <input id="{{'colourId' + item.ColourId}}" type="checkbox" ng-model="item.IsFavourite" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-buttons">
+                    <div class="col-xs-10 col-xs-offset-2">
+                        <button type="submit" class="btn btn-primary">Save Changes</button>
+                        <a href="/#/" class="btn btn-default" role="button">Cancel</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+</section>
